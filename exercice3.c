@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
-    int N, nbr,occ , i, T1[100],NT[100];
+    int N, i, j;
+    int T1[10],NT[10];
 
     printf("Entrer la dimension du tableau :");
     scanf("%d",&N);
@@ -11,9 +11,16 @@ int main()
         printf("\nEnter l'element %d du tableau 1: ",i+1);
         scanf("%d",&T1[i]);
     }
-    for(i = j= 0; i < N && j< 1; i++){
-        if (T1[] != 0)
 
+    for(i = 0 ,j = 0; i < N, j < N; i++, j++){ 
+            if (T1[i] == 0){
+                i++;
+                N--;
+            }
+            NT[j] = T1[i];
+        }
+    for(j = 0; j < N; j++){
+        printf("l'element %d du tableau est : %d\n",j+1,NT[j]);
     }
     return 0;
 }
